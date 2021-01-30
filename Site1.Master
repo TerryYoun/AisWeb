@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="_09196482GTY.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: x-large;
+        }
+
+        .auto-style2 {
+            width: 72px;
+            text-align: center;
+        }
+
+        .auto-style3 {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="logo">
+            <table width="100%" bgcolor="#FFFBD6">
+                <tr>
+                    <td align="center">
+                        <table>
+                            <tr>
+                                <td width="30%">
+                                    <img src="Properties/ais_logo.png" /></td>
+                                <td width="20%"></td>
+                                <td width="50%" class="auto-style1"><strong>Auckland Institute of Studies</strong></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="menu">
+            <table width="100%" bgcolor="#FFFBD6">
+                <tr>
+                    <td align="center">
+                        <table>
+                            <tr>
+                                <td><strong>
+                                    <asp:Menu ID="Menu1" runat="server" BackColor="#CCFFFF" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Large" ForeColor="#990000" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                                        <Items>
+                                            <asp:MenuItem NavigateUrl="Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="Login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="Register.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                                        </Items>
+                                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                        <StaticSelectedStyle BackColor="#FFCC66" />
+                                    </asp:Menu>
+                                </strong></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <table width="100%" bgcolor="#FFFBD6">
+                <tr>
+                    <td align="center">
+                        <table>
+                            <tr>
+                                <td width="5%"></td>
+                                <td width="20%">Developer: Gi Tae Youn</td>
+                                <td width="5%"></td>
+                                <td width="30%">COPYRIGHT © 1998 - 2020 WWW.AIS.AC.NZ</td>
+                                <td width="5%"></td>
+                                <td width="10%">
+                                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ExpandDepth="0" ImageSet="News" NodeIndent="10">
+                                        <HoverNodeStyle Font-Underline="True" />
+                                        <NodeStyle Font-Names="Arial" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                                        <ParentNodeStyle Font-Bold="False" />
+                                        <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" />
+                                    </asp:TreeView>
+                                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                                </td>
+                                <td width="5%"></td>
+                                <td width="20%" class="auto-style2">
+                                    <a href="https://www.facebook.com">
+                                        <img src="Properties/Facebook.png" width="20" height="20" /></a>
+                                    <a href="https://www.instagram.com">
+                                        <img src="Properties/Instagram.png" width="20" height="20" /></a>
+                                    <a href="https://www.twitter.com">
+                                        <img src="Properties/Twitter.png" width="20" height="20" /></a></td>
+
+                                <td width="5%"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
